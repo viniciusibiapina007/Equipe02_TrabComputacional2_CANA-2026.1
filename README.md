@@ -1,0 +1,1 @@
+# Equipe02_TrabComputacional2_CANA-2026.1
