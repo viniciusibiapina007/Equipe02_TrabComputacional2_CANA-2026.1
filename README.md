@@ -18,5 +18,3 @@ O trabalho tem como objetivo aplicar os conhecimentos desenvolvidos ao longo da 
 - Vinícius Rolim Aguiar Ibiapina
 
 *Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) - Campus Tianguá*
-Bacharelado em Ciência da Computação
-
