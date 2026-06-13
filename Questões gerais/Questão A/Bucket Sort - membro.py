@@ -1,30 +1,43 @@
 import random
 import timeit
 
-def bucket_sort(lista):
-    if len(lista) == 0:
-        return lista
+def insertion_sort(bld):
+    """Ordena cada balde individualmente."""
+    for i in range(1, len(bld)):
+        key = bld[i]
+        j = i - 1
+        while j >= 0 and bld[j] > key:
+            bld[j + 1] = bld[j]
+            j -= 1
+        bld[j + 1] = key
+    return bld
 
-    # Encontrar valores mínimo e máximo
-    menor = min(lista)
-    maior = max(lista)
 
-    # Criar os baldes
-    quantidade_baldes = len(lista)
-    baldes = [[] for _ in range(quantidade_baldes)]
+def bucket_sort(arr):
+    if not arr:
+        return arr
 
-    # Distribuir os elementos nos baldes
-    for valor in lista:
-        indice = int((valor - menor) * (quantidade_baldes - 1) / (maior - menor)) if maior != menor else 0
-        baldes[indice].append(valor)
+    # 1. Criação dos baldes ========================================
+    qtd_balde = len(arr)
+    max_val = max(arr)
+    min_val = min(arr)
 
-    # Ordenar cada balde e juntar os resultados
-    resultado = []
+    # Range de valores por balde
+    faixa_balde = (max_val - min_val) / qtd_balde + 1
+
+    baldes = [[] for _ in range(qtd_balde)]
+
+    # 2. Distribuição dos elementos nos baldes ======================
+    for num in arr:
+        index = int((num - min_val) / faixa_balde)
+        baldes[index].append(num)
+
+    # 3. Ordenação de cada balde e concatenação ======================
+    array_ordenado = []
     for balde in baldes:
-        resultado.extend(sorted(balde))
+        array_ordenado.extend(insertion_sort(balde))
 
-    return resultado
-
+    return array_ordenado
 
 
 def geraLista(tam):
