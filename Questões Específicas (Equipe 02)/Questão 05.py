@@ -84,8 +84,8 @@ def swap(arr, a, b):
    arr[b] = temp
 
 func1 = Funcionário("Dondon", 10000)
-func2 = Funcionário("João José Igor Arthur Gabriel", 1)
-func3 = Funcionário("Vitória", 3000)
+func2 = Funcionário("João", 1)
+func3 = Funcionário("José", 30)
 func4 = Funcionário("David", 700)
 func5 = Funcionário("Vinícius", 500)
 
