@@ -52,8 +52,12 @@ def geraLista(tam):
 
 
 tamanhos = [1000, 3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000]
+tempos = []
 
 for t in tamanhos:
     lista = geraLista(t)
+    tempos.append(timeit.timeit(f'bucket_sort({lista.copy()})', setup='from __main__ import bucket_sort', number=1))
+
     print(sum(lista))
 
+print(tempos)
