@@ -1,24 +1,25 @@
 import random
 import timeit
 
-def shell_sort(lista):
-    n = len(lista)
-    gap = n // 2
 
-    while gap > 0:
-        for i in range(gap, n):
-            temp = lista[i]
+def shell_sort(arr):
+    n = len(arr)
+    meio = n // 2
+
+    while meio > 0:
+        for i in range(meio, n):
+            temp = arr[i]
             j = i
 
-            while j >= gap and lista[j - gap] > temp:
-                lista[j] = lista[j - gap]
-                j -= gap
+            while j >= meio and arr[j - meio] > temp:
+                arr[j] = arr[j - meio]
+                j -= meio
 
-            lista[j] = temp
+            arr[j] = temp
 
-        gap //= 2
+        meio //= 2
 
-    return lista
+    return arr
 
 
 def geraLista(tam):
@@ -33,7 +34,8 @@ def geraLista(tam):
 
 
 tamanhos = [1000, 3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000]
+tempos = []
 
 for t in tamanhos:
     lista = geraLista(t)
-    print(sum(lista))
+    tempos.append(timeit.timeit(f'shell_sort({lista.copy()})', setup='from __main__ import shell_sort', number=1))
