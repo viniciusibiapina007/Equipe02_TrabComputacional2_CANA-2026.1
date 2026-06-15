@@ -1,4 +1,4 @@
-import random
+import random #Vinicius Rolim
 import timeit
 
 
