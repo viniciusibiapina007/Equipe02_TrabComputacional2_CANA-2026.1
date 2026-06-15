@@ -1,5 +1,5 @@
-import random
-import timeit
+import random #Vinicius
+import timeit 
 
 
 def insertion_sort(bld):
