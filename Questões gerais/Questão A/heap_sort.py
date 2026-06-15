@@ -1,4 +1,4 @@
-import random
+import random #José Gabriel
 import time
 
 def heapify(vetor, n, i):
