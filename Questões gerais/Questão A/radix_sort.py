@@ -1,5 +1,5 @@
-# José Gabriel
-import random
+
+import random # José Gabriel
 import time
 
 def counting_sort(vetor, exp):
