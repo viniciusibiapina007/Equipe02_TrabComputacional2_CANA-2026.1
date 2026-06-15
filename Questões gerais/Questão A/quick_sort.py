@@ -1,4 +1,4 @@
-import random as rd
+import random as rd #João Igor
 
 t = [1000, 3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000]
 
