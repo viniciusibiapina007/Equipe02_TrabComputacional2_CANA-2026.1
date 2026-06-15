@@ -1,5 +1,5 @@
 
-import random
+import random #David Lucas
 import time
 
 def insertionSort(lista):
