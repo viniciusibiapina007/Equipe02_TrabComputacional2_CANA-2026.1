@@ -1,6 +1,4 @@
-import random #Vinicius
-import timeit 
-
+#Vinicius
 
 def insertion_sort(bld):
     """Ordena cada balde individualmente."""
@@ -39,21 +37,3 @@ def bucket_sort(arr):
         array_ordenado.extend(insertion_sort(balde))
 
     return array_ordenado
-
-
-def geraLista(tam):
-    random.seed()
-    i = 0
-    lista = []
-    while i < tam:
-        lista.append(random.randint(1, tam))
-        i += 1
-
-    return lista
-
-tamanhos = [1000, 3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000]
-tempos = []
-
-for t in tamanhos:
-    lista = geraLista(t)
-    tempos.append(timeit.timeit(f'bucket_sort({lista.copy()})', setup='from __main__ import bucket_sort', number=1))
