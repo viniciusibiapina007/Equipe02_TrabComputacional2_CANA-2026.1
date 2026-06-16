@@ -1,5 +1,4 @@
-import random #João Arthur
-import time
+#João Arthur
 
 def CountingSort(arr):
 
@@ -22,21 +21,3 @@ def CountingSort(arr):
         count[num] -= 1
 
     return saida
-
-
-tamanhos = [1000, 3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000]
-
-for tamanho in tamanhos:
-    l = []
-    for i in range(tamanho):
-        l.append(random.randint(0, 1000))
-
-    tempo_inicial = time.time()
-
-    CountingSort(l)
-
-    tempo_final = time.time()
-
-    tempo_total = tempo_final - tempo_inicial
-
-    print(f"Tempo de execução: {tempo_total:.4f} segundos")
