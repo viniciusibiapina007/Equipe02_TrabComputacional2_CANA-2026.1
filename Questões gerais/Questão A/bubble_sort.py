@@ -1,8 +1,7 @@
-import random #João Arthur
-import time
+#João Arthur
 
 def BubbleSort(arr):
-    
+
     n = len(arr)
 
     for i in range(n):
@@ -10,5 +9,6 @@ def BubbleSort(arr):
             if arr[j] > arr[j + 1]:
                 temp = arr[j]
                 arr[j] = arr[j+1]
-                arr[j] = temp
+                arr[j+1] = temp
+
     return arr
